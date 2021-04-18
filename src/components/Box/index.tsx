@@ -6,7 +6,11 @@ export default function Box(props: JSX.IntrinsicElements['mesh']) {
     const mesh = useRef<THREE.Mesh>(null!)
     const [hovered, setHover] = useState(false)
     const [active, setActive] = useState(false)
-    useFrame((_state, _delta) => (mesh.current.rotation.x += 0.01))
+    useFrame((state, _delta) => {
+        const time = state.clock.getElapsedTime()
+        mesh.current.rotation.x += 0.01
+        mesh.current.position.y = mesh.current.position.y + Math.sin(time*2)/100;
+    })
     return (
         <mesh
             {...props}
