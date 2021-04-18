@@ -6,7 +6,7 @@ import './index.css'
 
 import reportWebVitals from './reportWebVitals'
 
-import Animation from './pages/Animation'
+import Scene from './pages/Scene'
 import App from './pages/_App'
 
 ReactDOM.render(
@@ -14,7 +14,7 @@ ReactDOM.render(
         <Router>
             <Switch>
                 <Route exact path='/'>
-                    <App component={Animation} />
+                    <App component={Scene} />
                 </Route>
             </Switch>
         </Router>
