@@ -6,7 +6,7 @@ import './index.css'
 
 import reportWebVitals from './reportWebVitals'
 
-import Home from './pages/Home'
+import Animation from './pages/Animation'
 import App from './pages/_App'
 
 ReactDOM.render(
@@ -14,7 +14,7 @@ ReactDOM.render(
         <Router>
             <Switch>
                 <Route exact path='/'>
-                    <App component={Home} />
+                    <App component={Animation} />
                 </Route>
             </Switch>
         </Router>
