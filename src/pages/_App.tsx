@@ -1,20 +1,19 @@
 import React from 'react'
+import styled from '@emotion/styled'
 
-import Menu from '../components/Menu'
-import Container from '../components/Container'
+const FullHeightDiv = styled.div`
+    height: 100vh;
+`
 
 interface AppProps {
     component: React.ComponentType<any>
 }
 
-function App({component: Component}: AppProps) {
+function App({ component: Component }: AppProps) {
     return (
-        <>
-            <Menu />
-            <Container>
-                <Component />
-            </Container>
-        </>
+        <FullHeightDiv>
+            <Component />
+        </FullHeightDiv>
     )
 }
 
